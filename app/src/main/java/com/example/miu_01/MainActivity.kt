@@ -207,7 +207,9 @@ fun DateCalculatorScreen() {
                                 datePickerState.selectedDateMillis?.let {
                                     selectedDate.timeInMillis = it
                                     // Preserve the hours and minutes
-                                    showDatePicker = false }
+                                    showDatePicker = false
+                                    calculateNewDate()
+                                }
                             }
                         ) {
                             Text("OK")
