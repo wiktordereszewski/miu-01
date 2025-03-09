@@ -90,12 +90,10 @@ fun DateCalculatorScreen() {
 
     val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
 
-    // Obliczanie nowej daty
     fun calculateNewDate() {
         try {
             val offset = offsetValue.toInt()
 
-            // Validate offset range to prevent unreasonable values
             if (offset > 10000 || offset < -10000) {
                 errorMessage = "Wartość przesunięcia musi być między -10000 a 10000"
                 resultDate = null
