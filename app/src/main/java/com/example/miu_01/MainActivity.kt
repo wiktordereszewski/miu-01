@@ -1,4 +1,5 @@
 package com.example.miu_01
+import com.example.miu_01.ui.theme.AppTheme
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -64,7 +65,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            MaterialTheme {
+            AppTheme(dynamicColor = false) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
